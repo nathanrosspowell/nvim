@@ -14,4 +14,16 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+	use {
+		'Mofiqul/dracula.nvim',
+		as = 'dracula',
+		config = function()
+			vim.cmd('colorscheme dracula')
+		end
+	}
+
+	use { 
+		'nvim-treesitter/nvim-treesitter',
+		{run = ':TSUpdate'} 
+	}
 end)
