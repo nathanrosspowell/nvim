@@ -26,4 +26,12 @@ After this is done, all of the referenced packages in these configuration files 
 
 `:PackerSync` 
 
+## External Tools
 
+### Find In Files
+
+https://github.com/BurntSushi/ripgrep
+
+```
+$ choco install ripgrep
+```
