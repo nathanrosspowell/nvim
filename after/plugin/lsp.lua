@@ -2,11 +2,9 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
+
 lsp.ensure_installed({
-	--[[
-  'tsserver',
-  'rust_analyzer',
-  --]]
+  'clangd',
 })
 
 
@@ -57,8 +55,14 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+lsp.skip_server_setup({'clangd'})
+
 lsp.setup()
+
+require('clangd_extensions').setup()
 
 vim.diagnostic.config({
     virtual_text = true
 })
+
+vim.keymap.set('n', '<leader>ao', '<cmd>ClangdSwitchSourceHeader<CR>')

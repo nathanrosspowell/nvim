@@ -22,15 +22,15 @@ return require('packer').startup(function(use)
         end
     }
 
-    use { 
+    use {
         'nvim-treesitter/nvim-treesitter',
-        {run = ':TSUpdate'} 
+        {run = ':TSUpdate'}
     }
 
     use { 'theprimeagen/harpoon' }
     use { 'mbbill/undotree' }
     use { 'tpope/vim-fugitive' }
-
+    use { 'p00f/clangd_extensions.nvim' }
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
+
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
