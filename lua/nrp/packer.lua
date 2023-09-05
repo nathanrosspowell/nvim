@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
     use { 'mbbill/undotree' }
     use { 'tpope/vim-fugitive' }
     use { 'p00f/clangd_extensions.nvim' }
+    use { 'mhartington/formatter.nvim' }
 
     use {
         'VonHeikemen/lsp-zero.nvim',
